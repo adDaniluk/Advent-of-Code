@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class The_Tyranny_of_the_Rocket_Equation_task_1 {
+public class the_Tyranny_of_the_Rocket_Equation_task_2 {
 
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -22,8 +22,14 @@ public class The_Tyranny_of_the_Rocket_Equation_task_1 {
         int fuel = 0;
         while(scanner.hasNext()){
             int mass = Integer.parseInt((scanner.nextLine()));
-            fuel += singleMass(mass);
+            int singleFuel = singleMass(mass);
+            while( singleFuel > 0){
+                fuel += singleFuel;
+                singleFuel = singleMass(singleFuel);
             }
+
+            //singleFuel += singleMass(mass);
+        }
         return fuel;
     }
 }
