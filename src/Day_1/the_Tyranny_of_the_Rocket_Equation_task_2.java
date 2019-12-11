@@ -8,7 +8,7 @@ public class the_Tyranny_of_the_Rocket_Equation_task_2 {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        File file = new File("C:\\Users\\Adam\\Desktop\\Advent of Code\\src\\Day_1\\input_mass.txt");
+        File file = new File(System.getProperty("user.dir")+"\\src\\Day_1\\input_mass.txt");
         System.out.print(fuelSum(file));
     }
 
